@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Book</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/main.js}"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/resources/css/main.css}"/>
+</head>
+
+<html>
+<body>
+<div class="container-fluid">
+    <nav>
+        <div th:replace="~{my-menu :: mymenu(UserAdd)}">
+        </div>
+    </nav>
+</div>
+<div class="container-fluid">
+    <form th:action="@{/users/newUser}" th:object="${user}" method="post">
+
+        <div class="form-group">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" id="login"  th:field="*{login}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" th:field="*{email}" >
+        </div>
+        <div class="form-group">
+            <label for="description">password</label>
+            <input type="password" class="form-control" id="description" th:field="*{password}">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" th:field="*{price}">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Send</button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
