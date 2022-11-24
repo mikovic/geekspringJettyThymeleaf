@@ -73,7 +73,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.3.3.Final</version>
+            <version>5.3.20.Final</version>
         </dependency>
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 &ndash;&gt;-->
         <dependency>
